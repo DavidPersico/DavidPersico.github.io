@@ -1,0 +1,65 @@
+
+header
+{
+  display:block;
+  width:100%;
+}
+
+body
+{
+  margin: 20px
+}
+
+title
+{
+  font-size:36pt;
+  color: #333;
+  font-family: 'Playfair Display', Arial, serif;
+  display: flex;
+  justify-content: center;
+}
+
+nav
+{
+  font-size:1em;
+  padding: 32px;
+}
+
+nav ul
+{
+  display: flex;
+  justify-content: center;
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+nav ul li
+{
+  display: inline;
+  border: 1px solid #888;
+  border-radius: 4px;
+  transition: 0.2s ease-in-out;
+  padding: 10px;
+  margin-inline-start: 45px;
+  font-family: 'Playfair Display', Arial, serif;
+  margin-inline-end: 45px;
+}
+
+nav ul li.selected
+{
+  background-color:#ddd;
+}
+
+nav ul li:hover
+{
+  background-color:#aaa;
+}
+
+main
+{
+  margin: 10px 0;
+  font-size:12pt;
+  display:block;
+  width:100%;
+}
