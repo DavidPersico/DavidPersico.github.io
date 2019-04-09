@@ -5,6 +5,12 @@ header
   width:100%;
 }
 
+
+head
+{
+  display: flex;
+}
+
 body
 {
   margin: 20px
