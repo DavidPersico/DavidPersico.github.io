@@ -9,7 +9,6 @@ header
 head
 {
   display: flex;
-  justify-content: center;
 }
 
 body
@@ -22,6 +21,8 @@ body
   font-size:36pt;
   color: #333;
   font-family: 'Playfair Display', Arial, serif;
+  display: flex;
+  justify-content: center;
 }
 
 nav
