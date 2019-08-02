@@ -45,32 +45,37 @@ nav
 {
   font-size:1em;
   padding: 32px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 nav ul
 {
-  display: flex;
-  justify-content: center;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
   list-style:none;
-  margin:0;
+  margin-bottom: 0;
+  margin-top: 0;
   padding:0;
 }
 
 nav ul li
 {
-  display: inline;
   border: 1px solid #888;
   border-radius: 4px;
   transition: 0.2s ease-in-out;
   padding: 10px;
+  background-color: #ff00ff;
   margin-inline-start: 45px;
   font-family: 'Playfair Display', Arial, serif;
   margin-inline-end: 45px;
+
 }
 
 nav ul li.selected
 {
-  background-color:#ddd;
+  background-color:#800080;
 }
 
 nav ul li:hover

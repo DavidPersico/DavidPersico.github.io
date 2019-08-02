@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>D3 Test</title>
+		<script type="text/javascript" src="d3/d3.v3.js"></script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var dataset = [ 5, 10, 15, 20, 25 ];
+			var colors = ["red","green","blue"];
+			var index = 0;
+			var rotcolor = function() {temp_index = index; index += 1; return colors[temp_index % 3]}
+			d3.select("body").selectAll("p")
+				.data(dataset)
+				.enter()
+				.append("p")
+				.style("color",rotcolor)
+				.text(function (x) {return x});
+			//#d3.select("body").append("p").text("meh").text("hi");
+		</script>
+	</body>
+</html>   

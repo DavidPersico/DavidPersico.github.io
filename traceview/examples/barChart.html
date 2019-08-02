@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>D3 Test</title>
+		<script type="text/javascript" src="d3/d3.v3.js"></script>
+		<style type="text/css">
+			div.bar {
+				display: inline-block;
+				width: 20px;
+				height: 75px;   /* We'll override this later */
+				background-color: teal;
+				margin-right: 2px;
+			}
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var dataset = [];                        //Initialize empty array
+			for (var i = 0; i < 25; i++) {           //Loop 25 times
+			    var newNumber = Math.random() * 30;  //New random number (0-30)
+			    dataset.push(newNumber);             //Add new number to array
+			}
+
+			var w = 500;
+			var h = 100;
+			var svg = d3.select("body")
+				.append("svg")
+				.attr("width",w)
+				.attr("height",h)
+			svg.selectAll("rect")
+				.data(dataset)
+				.enter()
+				.append("rect")
+				.attr("x",function(d,i) { return i*(w/dataset.length)})
+				//.attr("y",function(d) {return d*5})
+				.attr("y",function(d) { return h-d*3})
+				.attr("width",(w/dataset.length - 3))
+				.attr("height",function(d) {return d*3})
+				.attr("fill", function(d) {
+					console.log(d)
+					var n = (d*5) + ""
+					return "rgb(0, 0, " + n.split(".")[0] + ")";
+				})
+				//.attr("fill", "rgb(0,0,80.0)")
+			svg.selectAll("text")
+				.data(dataset)
+				.enter()
+				.append("text")
+				.text(function(d){ return (d + "").split(".")[0]})
+				.attr("x", function(d, i ){
+					return i * (w / dataset.length);
+				})
+				.attr("y", function(d) { return h - d*4 + 30})
+				.attr("font-family", "sans-serif")
+				.attr("font-size", "11px")
+				.attr("fill", "white")
+				//.attr("text-anchor", "middle")
+				//.attr("y", 3)
+		</script>
+
+	</body>
+</html>   
