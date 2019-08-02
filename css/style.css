@@ -5,18 +5,25 @@ header
   width:100%;
 }
 
+a
+{
+  color:fuchsia;
+  text-decoration:none;
+}
+
 /*Below 3-line block from w3 schools*/
 h1{font-size:36px}h2{font-size:30px}h3{font-size:24px}h4{font-size:20px}h5{font-size:18px}h6{font-size:16px}.w3-serif{font-family:serif}
 h1,h2,h3,h4,h5,h6{font-family:"Segoe UI",Arial,sans-serif;font-weight:400;margin:10px 0}.w3-wide{letter-spacing:4px}
 hr{border:0;border-top:1px solid #eee;margin:20px 0}
 
-body
+html, body
 {
-  margin-top: 9%;
-  margin-left: 15%;
-  margin-right: 15%;
-  background-color: whitesmoke;
+  margin: 0;
   text-align: center;
+  width: auto;
+  height: 100%;
+  background-color: whitesmoke;
+
 }
 
 border
@@ -29,31 +36,34 @@ titlesmall
 {
   font-size:25pt;
   color: #333;
-  font-family: 'Playfair Display', Arial, serif;
+  font-family: 'Kaushan Script', cursive;
 }
 
 title
 {
-  font-size:36pt;
-  color: #333;
-  font-family: 'Playfair Display', Arial, serif;
+  font-size:4.4vw;
+  color:fuchsia;opacity: 0.8;
+  font-family: 'Kaushan Script', cursive;
   display: flex;
-  justify-content: center;
+  justify-content: left
 }
 
 nav
 {
-  font-size:1em;
-  padding: 32px;
-  margin-left: auto;
-  margin-right: auto;
+  padding-top: 5%;
+  padding-bottom: 0;
+  padding-left:2%;
+  padding-right:90%;
+}
+
+div, span
+{
+  height: inherit;
 }
 
 nav ul
 {
   display: table;
-  margin-left: auto;
-  margin-right: auto;
   list-style:none;
   margin-bottom: 0;
   margin-top: 0;
@@ -62,25 +72,27 @@ nav ul
 
 nav ul li
 {
-  border: 1px solid #888;
-  border-radius: 4px;
+  font-size:2vw;
+  font-family: 'Kaushan Script', cursive;
+  border: 0.5vw solid #CCC;opacity: 0.6;
+  padding: .8vw;
+  border-radius: 5px;
+  margin-bottom: 3.4vw;
   transition: 0.2s ease-in-out;
-  padding: 10px;
-  background-color: #ff00ff;
-  margin-inline-start: 45px;
-  font-family: 'Playfair Display', Arial, serif;
-  margin-inline-end: 45px;
+  background-color: #CCC;opacity: 0.6;
 
 }
 
 nav ul li.selected
 {
-  background-color:#800080;
+  border: 0.5vw solid #800080;opacity:0.2;
+  background-color:#800080;opacity:0.2;
 }
 
 nav ul li:hover
 {
-  background-color:#aaa;
+  background-color:#aaa;opacity: 0.6;
+  border: 0.5vw solid #aaa;opacity: 0.6;
 }
 
 main
@@ -90,4 +102,49 @@ main
   font-family: 'Playfair Display', Arial, serif;
   display: flex;
   justify-content: center;
+}
+
+.background #home {
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  background-size: 100%;
+  background-repeat: yes;
+}
+
+.background #home .inner {
+    display: block;
+    height: 0;
+    padding-top: 1%;
+    padding-left: 4%;
+}
+
+@media only screen and (min-width: 200px) {
+  .background #home {
+    background-image: url('/material/backgroundTiny.JPG');
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .background #home {
+    background-image: url('/material/backgroundSHD.JPG');
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .background #home {
+    background-image: url('/material/backgroundHD.JPG');
+  }
+}
+
+@media only screen and (min-width: 2500px) {
+  .background #home {
+    background-image: url('/material/background3k.JPG');
+  }
+}
+
+@media only screen and (min-width: 3000px) {
+  .background #home {
+    background-image: url('/material/background4k.JPG');
+  }
 }
