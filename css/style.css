@@ -80,7 +80,6 @@ nav ul li
   margin-bottom: 3.4vw;
   transition: 0.2s ease-in-out;
   background-color: #CCC;opacity: 0.6;
-
 }
 
 nav ul li.selected
@@ -97,19 +96,25 @@ nav ul li:hover
 
 main
 {
-  font-size:16pt;
+  margin-top: 10%;
+  margin-left: 20%;
+  margin-right: 20%;
+  font-size:1.7vw;
   color: #333;
   font-family: 'Playfair Display', Arial, serif;
-  display: flex;
+  display: block;
   justify-content: center;
+  align-content: center;
 }
 
 .background #home {
   display: inline-block;
   width: 100%;
   vertical-align: middle;
-  background-size: 100%;
-  background-repeat: yes;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .background #home .inner {
@@ -118,6 +123,23 @@ main
     padding-top: 1%;
     padding-left: 4%;
 }
+
+.my-content
+{
+  align-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+
+}
+
+.my-content .Slides
+{
+  width: 100%;
+  height: auto;
+}
+
 
 @media only screen and (min-width: 200px) {
   .background #home {
