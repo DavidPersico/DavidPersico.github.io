@@ -7,7 +7,7 @@ header
 
 a
 {
-  color:fuchsia;
+  color:#415a00;
   text-decoration:none;
 }
 
@@ -16,14 +16,11 @@ h1{font-size:36px}h2{font-size:30px}h3{font-size:24px}h4{font-size:20px}h5{font-
 h1,h2,h3,h4,h5,h6{font-family:"Segoe UI",Arial,sans-serif;font-weight:400;margin:10px 0}.w3-wide{letter-spacing:4px}
 hr{border:0;border-top:1px solid #eee;margin:20px 0}
 
-html, body
+html,body
 {
   margin: 0;
-  text-align: center;
-  width: auto;
+  width: 100%;
   height: 100%;
-  background-color: whitesmoke;
-
 }
 
 border
@@ -42,50 +39,60 @@ titlesmall
 title
 {
   font-size:4.4vw;
-  color:fuchsia;opacity: 0.8;
+  color:#78a400;opacity: 0.8;
   font-family: 'Kaushan Script', cursive;
   display: flex;
-  justify-content: left
+  justify-content: inherit;
 }
 
 nav
 {
-  padding-top: 5%;
-  padding-bottom: 0;
-  padding-left:2%;
-  padding-right:90%;
+  padding-top: 5vh;
+  padding-bottom: 20vh;
+  width:70%;
+  height: inherit;
+  overflow: hidden;
+
 }
 
 div, span
 {
   height: inherit;
+  width: inherit;
 }
 
 nav ul
 {
-  display: table;
+
+  display: table-cell;
   list-style:none;
   margin-bottom: 0;
   margin-top: 0;
   padding:0;
+  overflow: inherit;
+
 }
 
 nav ul li
 {
+  text-align: center;
   font-size:2vw;
   font-family: 'Kaushan Script', cursive;
   border: 0.5vw solid #CCC;opacity: 0.6;
-  padding: .8vw;
-  border-radius: 5px;
-  margin-bottom: 3.4vw;
+  padding-left: .8vw;
+  padding-right:.8vw;
+  padding-top: 1.2vh;
+  padding-bottom: 1.2vh;
+  border-radius: 4px;
+  margin-bottom: 5vh;
   transition: 0.2s ease-in-out;
   background-color: #CCC;opacity: 0.6;
 }
 
 nav ul li.selected
 {
-  border: 0.5vw solid #800080;opacity:0.2;
-  background-color:#800080;opacity:0.2;
+  border: 0.5vw solid #78a400;opacity:0.2;
+  background-color:#78a400;opacity:0.2;
 }
 
 nav ul li:hover
@@ -94,7 +101,22 @@ nav ul li:hover
   border: 0.5vw solid #aaa;opacity: 0.6;
 }
 
+.bar
+{
+  display: block;
+  width: 100%;
+  background-color: #f1df9d;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
 main
+{
+  background-color: #aaa;opacity: 0.6;
+  width: 100%;
+}
+
+content
 {
   margin-top: 10%;
   margin-left: 20%;
@@ -108,18 +130,20 @@ main
 }
 
 .background #home {
-  display: inline-block;
+  display: block;
   width: 100%;
+  height: 100%;
   vertical-align: middle;
   background-attachment: fixed;
-  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .background #home .inner {
     display: block;
-    height: 0;
+    width: 90%;
+    justify-content: left;
+    height: auto;
     padding-top: 1%;
     padding-left: 4%;
 }
@@ -131,6 +155,11 @@ main
   margin-left: auto;
   margin-right: auto;
   width: 70%;
+  border: 0.9vw solid #CCC;
+  background-color: #CCC;
+  padding: .8vw;
+  border-radius: 3px;
+  margin-bottom: 4vw;
 
 }
 
@@ -140,6 +169,35 @@ main
   height: auto;
 }
 
+@media only screen and (min-aspect-ratio: 3/1) {
+  nav ul
+  {
+    display: flex;
+  }
+  nav ul li
+  {
+    margin-right: 3vw;
+  }
+}
+@media only screen and (min-aspect-ratio: 1/8) and (max-aspect-ratio: 9/5){
+  .background #home {
+    background-position: center;
+    }
+    title
+    {
+      font-size:5.4vh;
+    }
+    nav ul li
+    {
+      font-size:3.2vh;
+      padding-left: 1.4vh;
+      padding-right:1.4vh;
+      padding-top: 1.6vh;
+      padding-bottom: 1.6vh;
+      border-radius: 4px;
+      margin-bottom: 7vh;
+    }
+}
 
 @media only screen and (min-width: 200px) {
   .background #home {
